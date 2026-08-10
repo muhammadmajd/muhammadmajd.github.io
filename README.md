@@ -1,36 +1,22 @@
-# Muhammad Majd Portfolio
+# Muhammad Aliah — Portfolio
 
-Static portfolio website prepared for GitHub Pages.
+Personal portfolio site, published via GitHub Pages at:
 
-The intended published address is:
+**https://muhammadmajd.github.io**
 
-`https://muhammadmajd.github.io`
+## Structure
 
-## Publish
+- `index.html` — page content (hero, about, projects, contact)
+- `styles.css` — all styling
+- `script.js` — smooth-scroll for in-page nav links
+- `.nojekyll` — tells GitHub Pages to serve the files as-is, skipping Jekyll processing
 
-1. Rename or create the GitHub repository as `muhammadmajd.github.io`.
-2. Push the contents of `portfolio-site/` to the repository root.
-3. Enable GitHub Pages for the repository.
-4. Use the `main` branch and `/ (root)` as the publish source.
+## Updating
 
-## Live Deployment Checklist
-
-- [ ] Repository name is `muhammadmajd.github.io`
-- [ ] `main` branch contains the portfolio files at the repository root
-- [ ] GitHub Pages is enabled for `main` and `/ (root)`
-- [ ] The site opens at `https://muhammadmajd.github.io`
-- [ ] Hero, project cards, and contact section render correctly
-- [ ] Sham VPN screenshots/cards display without layout overflow
-- [ ] Project links open the correct App Store / Google Play / GitHub pages
-- [ ] The repository is public if you want GitHub Pages to serve it publicly
+Edit the files directly and push to `main` — GitHub Pages rebuilds automatically
+within a minute or two. No build step required.
 
 ## Local preview
 
-Open `index.html` directly in a browser, or serve the folder with any static server.
-
-## Content
-
-- About Me
-- Featured Projects
-- GitHub profile link
-- Contact section
+Open `index.html` directly in a browser, or serve the folder with any static
+file server, e.g. `python3 -m http.server` from this directory.
