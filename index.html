@@ -5,35 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
+      data-i18n-content="meta.description"
       content="Portfolio website for Muhammad Aliah, Software Developer & Educator."
     />
-    <title>Muhammad Aliah | Software Developer &amp; Educator</title>
+    <title data-i18n="meta.title">Muhammad Aliah | Software Developer &amp; Educator</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script>
+      (function () {
+        try {
+          var params = new URLSearchParams(window.location.search);
+          var lang = params.get('lang') || localStorage.getItem('lang') || 'en';
+          if (['en', 'ar', 'ru'].indexOf(lang) === -1) lang = 'en';
+          document.documentElement.lang = lang;
+          document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <header class="site-header">
       <div class="brand">
-        <span class="brand-mark">M</span>
+        <span class="brand-mark">
+          <img src="./assets/profile.png" alt="Muhammad Aliah" />
+        </span>
         <div>
           <div class="brand-name">Muhammad Aliah</div>
-          <div class="brand-role">Software Developer &amp; Educator</div>
+          <div class="brand-role" data-i18n="brand.role">Software Developer &amp; Educator</div>
         </div>
       </div>
 
       <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#publications" data-i18n="nav.publications">Publications</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
+
+      <div class="lang-switch" role="group" data-i18n-aria="langSwitch.aria">
+        <button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
+        <button type="button" class="lang-btn" data-lang="ar" aria-label="العربية">AR</button>
+        <button type="button" class="lang-btn" data-lang="ru" aria-label="Русский">RU</button>
+      </div>
     </header>
 
     <main>
       <section class="hero">
         <div class="hero-copy">
           <p class="eyebrow">Flutter • Dart • Laravel • Python • C++ • AI/ML</p>
-          <h1>13+ years building production software — and teaching others to build it.</h1>
-          <p class="hero-text">
-            I'm a software developer and educator with over 13 years of
+          <h2 data-i18n="hero.title">11+ years building production software — and teaching others to build it.</h2>
+          <p class="hero-text" data-i18n="hero.text">
+            I'm a software developer and educator with over 11 years of
             experience in IT. I build production mobile and backend systems —
             5+ years with Flutter — and spend part of my time teaching web
             development and databases. I'm currently researching AI and
@@ -48,7 +69,7 @@
                   <path d="M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </span>
-              Featured Work
+              <span data-i18n="hero.cta.featured">Featured Work</span>
             </a>
             <a class="btn btn-secondary" href="https://github.com/muhammadmajd" target="_blank" rel="noreferrer">
               <span class="icon" aria-hidden="true">
@@ -60,7 +81,7 @@
             </a>
           </div>
 
-          <div class="platforms" aria-label="Platforms">
+          <div class="platforms" aria-label="Platforms" data-i18n-aria="hero.platformsAria">
             <span>Android</span>
             <span>iOS</span>
             <span>Windows</span>
@@ -71,9 +92,13 @@
         </div>
 
         <aside class="hero-panel" aria-label="Profile highlights">
+          <div class="panel-card panel-photo">
+            <img src="./assets/profile.png" alt="Muhammad Aliah" />
+          </div>
+
           <div class="panel-card panel-card-main">
-            <p class="panel-label">Professional summary</p>
-            <p>
+            <p class="panel-label" data-i18n="hero.panel.summaryLabel">Professional summary</p>
+            <p data-i18n="hero.panel.summaryText">
               I've shipped production apps across e-commerce, VPN
               infrastructure, and school management — plus two years teaching
               web development and databases to students.
@@ -82,20 +107,20 @@
 
           <div class="panel-grid">
             <div class="mini-card">
-              <span>13+</span>
-              <small>Years in IT</small>
+              <span>11+</span>
+              <small data-i18n="hero.panel.years">Years in IT</small>
             </div>
             <div class="mini-card">
               <span>5+</span>
-              <small>Years with Flutter</small>
+              <small data-i18n="hero.panel.flutterYears">Years with Flutter</small>
             </div>
             <div class="mini-card">
-              <span>Teaching</span>
-              <small>Web dev &amp; databases</small>
+              <span data-i18n="hero.panel.teaching">Teaching</span>
+              <small data-i18n="hero.panel.teachingSub">Web dev &amp; databases</small>
             </div>
             <div class="mini-card">
-              <span>Research</span>
-              <small>PhD in AI &amp; ML</small>
+              <span data-i18n="hero.panel.research">Research</span>
+              <small data-i18n="hero.panel.researchSub">PhD in AI &amp; ML</small>
             </div>
           </div>
         </aside>
@@ -103,13 +128,13 @@
 
       <section id="about" class="section">
         <div class="section-heading">
-          <p class="eyebrow">About Me</p>
-          <h2>Development, teaching, and applied AI research.</h2>
+          <p class="eyebrow" data-i18n="about.eyebrow">About Me</p>
+          <h2 data-i18n="about.title">Development, teaching, and applied AI research.</h2>
         </div>
 
         <div class="about-grid">
           <div class="about-card">
-            <p>
+            <p data-i18n="about.p1">
               My technical background covers Python, C++, JavaScript, Dart,
               backend development, and databases — with over 5 years building
               production mobile apps in Flutter, alongside Laravel, Linux
@@ -117,7 +142,7 @@
             </p>
           </div>
           <div class="about-card">
-            <p>
+            <p data-i18n="about.p2">
               I hold a Master's degree from Bauman Moscow State Technical
               University (BMSTU) and am currently pursuing a PhD there,
               researching Artificial Intelligence and Machine Learning. I've
@@ -129,10 +154,44 @@
         </div>
       </section>
 
+      <section id="publications" class="section">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="pub.eyebrow">Publications</p>
+          <h2 data-i18n="pub.title">Applied AI &amp; NLP research.</h2>
+        </div>
+
+        <article class="project-card">
+          <div class="project-topline">
+            <div>
+              <p class="project-kicker" data-i18n="pub.kicker">REEPE 2025 &middot; April 2025</p>
+              <h3>Enhancing Arabic Text Classification: The Impact of Dataset Variety on BERT Model</h3>
+            </div>
+          </div>
+
+          <p class="project-description">
+            Muhammad Aliah, Dmitry V. Berezkin, Ilya A. Kozlov &mdash; 2025
+            7th International Youth Conference on Radio Electronics,
+            Electrical and Power Engineering (REEPE).
+          </p>
+
+          <div class="tag-row">
+            <span>BERT</span>
+            <span>Arabic NLP</span>
+            <span>Text Classification</span>
+          </div>
+
+          <div class="project-links">
+            <a class="btn btn-secondary" href="https://doi.org/10.1109/REEPE63962.2025.10971045" target="_blank" rel="noreferrer">
+              <span data-i18n="pub.link">View on IEEE Xplore</span>
+            </a>
+          </div>
+        </article>
+      </section>
+
       <section id="projects" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Featured Projects</p>
-          <h2>Selected product work.</h2>
+          <p class="eyebrow" data-i18n="projects.eyebrow">Featured Projects</p>
+          <h2 data-i18n="projects.title">Selected product work.</h2>
         </div>
 
         <div class="projects-grid">
@@ -140,12 +199,12 @@
             <div class="project-topline">
               <div>
                 <p class="project-kicker">Sham VPN</p>
-                <h3>Cross-platform VPN solution</h3>
+                <h3 data-i18n="proj.shamvpn.title">Cross-platform VPN solution</h3>
               </div>
-              <span class="project-badge">Active</span>
+              <span class="project-badge" data-i18n="common.badgeActive">Active</span>
             </div>
 
-            <p class="project-description">
+            <p class="project-description" data-i18n="proj.shamvpn.desc">
               A multi-platform VPN stack built with Flutter, Laravel, Linux
               services, and Xray for production use across mobile and desktop
               clients, with a focus on resilient connectivity in restrictive
@@ -171,42 +230,62 @@
             <div class="project-actions">
               <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.maitech.mvpn" target="_blank" rel="noreferrer">Google Play</a>
               <a class="btn btn-secondary" href="https://testflight.apple.com/join/CVTKhpyp" target="_blank" rel="noreferrer">TestFlight</a>
-              <a class="btn btn-ghost" href="#shamvpn-shots">Screenshots</a>
+              <a class="btn btn-ghost" href="#shamvpn-shots"><span data-i18n="common.screenshots">Screenshots</span></a>
             </div>
 
-            <div id="shamvpn-shots" class="shot-grid" aria-label="Sham VPN screenshots">
-              <div class="shot">
-                <div class="shot-header">
-                  <span>Dashboard</span>
-                  <span>Connected</span>
-                </div>
-                <div class="shot-body">
-                  <div class="shot-line"></div>
-                  <div class="shot-line short"></div>
-                  <div class="shot-bar"></div>
-                </div>
+            <div id="shamvpn-shots" class="project-gallery project-gallery-large" aria-label="Sham VPN screenshots">
+              <img src="./assets/Sham%20VPN/6b455377a0de3cc468f5422c1b2c060e4b34bb16.jpeg.jpeg" alt="Sham VPN screenshot 1" loading="lazy" />
+              <img src="./assets/Sham%20VPN/7b6a920ef4adff5c0429014d2cc47cdc8bee6fce.jpeg" alt="Sham VPN screenshot 2" loading="lazy" />
+              <img src="./assets/Sham%20VPN/861f5435b67a3b9259919daffbf3171df49fe0bd.jpeg" alt="Sham VPN screenshot 3" loading="lazy" />
+              <img src="./assets/Sham%20VPN/8e00f583321b104a1927d0a41861efba8e1ff92e.jpeg" alt="Sham VPN screenshot 4" loading="lazy" />
+              <img src="./assets/Sham%20VPN/b9975a17fe522655d40601950d8a1cdd1b589373.jpeg" alt="Sham VPN screenshot 5" loading="lazy" />
+              <img src="./assets/Sham%20VPN/d12f9bf49567c2b3ae970b9a7ac37c627642a82c.jpeg" alt="Sham VPN screenshot 6" loading="lazy" />
+              <img src="./assets/Sham%20VPN/d8c530bac7c61be43006ab32d6d189d4ab5f08d9.jpeg.jpeg" alt="Sham VPN screenshot 7" loading="lazy" />
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <div>
+                <p class="project-kicker">Machine Learning &amp; AI</p>
+                <h3 data-i18n="proj.bert.title">Dictionary-Augmented Medical Text Classifier</h3>
               </div>
-              <div class="shot">
-                <div class="shot-header">
-                  <span>Server list</span>
-                  <span>Latency</span>
-                </div>
-                <div class="shot-body">
-                  <div class="shot-row"></div>
-                  <div class="shot-row"></div>
-                  <div class="shot-row"></div>
-                </div>
-              </div>
-              <div class="shot">
-                <div class="shot-header">
-                  <span>Traffic</span>
-                  <span>Live</span>
-                </div>
-                <div class="shot-body">
-                  <div class="shot-meter"></div>
-                  <div class="shot-meter short"></div>
-                </div>
-              </div>
+              <span class="project-badge muted" data-i18n="common.badgeResearch">Research</span>
+            </div>
+
+            <p class="project-description" data-i18n="proj.bert.desc">
+              A BERT-family text classification pipeline for medical
+              transcription abstracts. Domain terms from a medical dictionary
+              are tagged with special tokens before fine-tuning, and this
+              augmentation lifts accuracy for BERT, BioBERT, ClinicalBERT,
+              BlueBERT, and SciBERT alike.
+            </p>
+
+            <div class="project-gallery" aria-label="Medical text classifier result charts">
+              <img src="./assets/bert/4.png" alt="Distribution of medical specialties in the training data" loading="lazy" />
+              <img src="./assets/bert/df.png" alt="Accuracy comparison before vs. after dictionary augmentation across BERT variants" loading="lazy" />
+              <img src="./assets/bert/33.png" alt="Accuracy improvement from dictionary augmentation across BERT variants" loading="lazy" />
+            </div>
+
+            <div class="tag-row">
+              <span>NLP</span>
+              <span>BERT</span>
+              <span>PyTorch</span>
+              <span>Transformers</span>
+            </div>
+
+            <div class="platform-row">
+              <span>Python</span>
+              <span>Google Colab</span>
+            </div>
+
+            <div class="project-links">
+              <a class="btn btn-secondary" href="https://drive.google.com/file/d/1bVAkC420DlsCUPQ8KiidtjdB-skdFRTy/view?usp=sharing" target="_blank" rel="noreferrer">
+                <span data-i18n="common.openInColab">Open in Colab</span>
+              </a>
+              <a class="btn btn-ghost" href="https://github.com/muhammadmajd/Enhanced-Medical-Text-Classification" target="_blank" rel="noreferrer">
+                <span data-i18n="common.viewCode">View Code</span>
+              </a>
             </div>
           </article>
 
@@ -214,16 +293,23 @@
             <div class="project-topline">
               <div>
                 <p class="project-kicker">HudHud Shop</p>
-                <h3>Local marketplace app</h3>
+                <h3 data-i18n="proj.hudhud.title">Local marketplace app</h3>
               </div>
-              <span class="project-badge muted">Live</span>
+              <span class="project-badge muted" data-i18n="common.badgeLive">Live</span>
             </div>
 
-            <p class="project-description">
+            <p class="project-description" data-i18n="proj.hudhud.desc">
               An app for displaying and purchasing local products, with
               direct communication between sellers and buyers across the Gulf
               countries and Jordan.
             </p>
+
+            <div class="project-gallery" aria-label="HudHud Shop screenshots">
+              <img src="./assets/HudHud%20Shop/h1.webp" alt="HudHud Shop screenshot 1" loading="lazy" />
+              <img src="./assets/HudHud%20Shop/2.png" alt="HudHud Shop screenshot 2" loading="lazy" />
+              <img src="./assets/HudHud%20Shop/3.webp" alt="HudHud Shop screenshot 3" loading="lazy" />
+              <img src="./assets/HudHud%20Shop/4.png" alt="HudHud Shop screenshot 4" loading="lazy" />
+            </div>
 
             <div class="tag-row">
               <span>Flutter</span>
@@ -247,9 +333,9 @@
             </div>
 
             <ul class="feature-list">
-              <li>Direct seller-buyer messaging</li>
-              <li>Local product listings</li>
-              <li>Gulf countries &amp; Jordan coverage</li>
+              <li data-i18n="proj.hudhud.feature1">Direct seller-buyer messaging</li>
+              <li data-i18n="proj.hudhud.feature2">Local product listings</li>
+              <li data-i18n="proj.hudhud.feature3">Gulf countries &amp; Jordan coverage</li>
             </ul>
           </article>
 
@@ -257,14 +343,21 @@
             <div class="project-topline">
               <div>
                 <p class="project-kicker">Paloma | بالوما</p>
-                <h3>MENA marketplace app</h3>
+                <h3 data-i18n="proj.paloma.title">MENA marketplace app</h3>
               </div>
-              <span class="project-badge muted">Live</span>
+              <span class="project-badge muted" data-i18n="common.badgeLive">Live</span>
             </div>
 
-            <p class="project-description">
+            <p class="project-description" data-i18n="proj.paloma.desc">
               The best place to buy and sell things across the MENA region.
             </p>
+
+            <div class="project-gallery" aria-label="Paloma screenshots">
+              <img src="./assets/Paloma/1.png" alt="Paloma screenshot 1" loading="lazy" />
+              <img src="./assets/Paloma/2.webp" alt="Paloma screenshot 2" loading="lazy" />
+              <img src="./assets/Paloma/3.webp" alt="Paloma screenshot 3" loading="lazy" />
+              <img src="./assets/Paloma/5.webp" alt="Paloma screenshot 4" loading="lazy" />
+            </div>
 
             <div class="tag-row">
               <span>Flutter</span>
@@ -287,16 +380,23 @@
             <div class="project-topline">
               <div>
                 <p class="project-kicker">Elan</p>
-                <h3>Advertising &amp; news platform</h3>
+                <h3 data-i18n="proj.elan.title">Advertising &amp; news platform</h3>
               </div>
-              <span class="project-badge muted">Live</span>
+              <span class="project-badge muted" data-i18n="common.badgeLive">Live</span>
             </div>
 
-            <p class="project-description">
+            <p class="project-description" data-i18n="proj.elan.desc">
               Lets advertisers publish ads directly, aggregates news from
               multiple sources by category, and includes an official
               bulletin section covering all advertisements.
             </p>
+
+            <div class="project-gallery" aria-label="Elan screenshots">
+              <img src="./assets/Elan/1.png" alt="Elan screenshot 1" loading="lazy" />
+              <img src="./assets/Elan/2.png" alt="Elan screenshot 2" loading="lazy" />
+              <img src="./assets/Elan/3.png" alt="Elan screenshot 3" loading="lazy" />
+              <img src="./assets/Elan/7.jpeg" alt="Elan screenshot 4" loading="lazy" />
+            </div>
 
             <div class="tag-row">
               <span>Flutter</span>
@@ -319,12 +419,12 @@
             <div class="project-topline">
               <div>
                 <p class="project-kicker">Schooms</p>
-                <h3>School management platform</h3>
+                <h3 data-i18n="proj.schooms.title">School management platform</h3>
               </div>
-              <span class="project-badge muted">Live</span>
+              <span class="project-badge muted" data-i18n="common.badgeLive">Live</span>
             </div>
 
-            <p class="project-description">
+            <p class="project-description" data-i18n="proj.schooms.desc">
               A web-based platform that centralizes school admissions, news,
               events, and career management — families apply online while
               staff review and process intake from one place.
@@ -342,7 +442,7 @@
 
             <div class="project-links">
               <a class="btn btn-secondary" href="https://school.maitechno.com/" target="_blank" rel="noreferrer">
-                Website
+                <span data-i18n="common.website">Website</span>
               </a>
             </div>
           </article>
@@ -351,12 +451,12 @@
             <div class="project-topline">
               <div>
                 <p class="project-kicker">HRS</p>
-                <h3>HR management system</h3>
+                <h3 data-i18n="proj.hrs.title">HR management system</h3>
               </div>
               <span class="project-badge muted">GitHub</span>
             </div>
 
-            <p class="project-description">
+            <p class="project-description" data-i18n="proj.hrs.desc">
               A web-based Human Resources management system for handling
               employees, attendance, salaries, and core HR operations from a
               single platform.
@@ -382,15 +482,96 @@
           <article class="project-card">
             <div class="project-topline">
               <div>
+                <p class="project-kicker">Supplity</p>
+                <h3 data-i18n="proj.supplity.title">B2B tech &amp; IT hardware marketplace</h3>
+              </div>
+              <span class="project-badge muted" data-i18n="common.badgeLive">Live</span>
+            </div>
+
+            <p class="project-description" data-i18n="proj.supplity.desc">
+              A B2B e-commerce platform for enterprise IT hardware and data
+              center solutions, serving businesses across Dubai, Qatar, and
+              Saudi Arabia with wholesale purchasing, quote requests, and
+              vendor-backed technology services.
+            </p>
+
+            <div class="project-gallery" aria-label="Supplity screenshots">
+              <img src="./assets/Supplity/1.png" alt="Supplity homepage screenshot" loading="lazy" />
+            </div>
+
+            <div class="tag-row">
+              <span>Laravel</span>
+              <span>PHP</span>
+              <span>E-commerce</span>
+              <span>B2B</span>
+            </div>
+
+            <div class="platform-row">
+              <span>Web</span>
+            </div>
+
+            <div class="project-links">
+              <a class="btn btn-secondary" href="https://supplity.com/" target="_blank" rel="noreferrer">
+                <span data-i18n="common.website">Website</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <div>
+                <p class="project-kicker">Phoenix 4 Marketing</p>
+                <h3 data-i18n="proj.p4m.title">E-commerce &amp; network marketing platform</h3>
+              </div>
+              <span class="project-badge muted" data-i18n="common.badgeLive">Live</span>
+            </div>
+
+            <p class="project-description" data-i18n="proj.p4m.desc">
+              A multi-language e-commerce and network marketing platform with
+              distributor accounts, a structured reward program, and training
+              modules alongside a standard retail storefront.
+            </p>
+
+            <div class="project-gallery" aria-label="Phoenix 4 Marketing screenshots">
+              <img src="./assets/Phoenix4Marketing/1.png" alt="Phoenix 4 Marketing homepage screenshot" loading="lazy" />
+            </div>
+
+            <div class="tag-row">
+              <span>Laravel</span>
+              <span>PHP</span>
+              <span>E-commerce</span>
+              <span>Multi-language</span>
+            </div>
+
+            <div class="platform-row">
+              <span>Web</span>
+            </div>
+
+            <div class="project-links">
+              <a class="btn btn-secondary" href="https://phoenix4marketing.com/web/index.php" target="_blank" rel="noreferrer">
+                <span data-i18n="common.website">Website</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <div>
                 <p class="project-kicker">M-Shop</p>
-                <h3>Flutter e-commerce app</h3>
+                <h3 data-i18n="proj.mshop.title">Flutter e-commerce app</h3>
               </div>
               <span class="project-badge muted">GitHub</span>
             </div>
 
-            <p class="project-description">
+            <p class="project-description" data-i18n="proj.mshop.desc">
               A Flutter project that lets clients buy products online.
             </p>
+
+            <div class="project-gallery" aria-label="M-Shop screenshots">
+              <img src="./assets/M-Shop/5.jpeg" alt="M-Shop screenshot 1" loading="lazy" />
+              <img src="./assets/M-Shop/6.jpeg" alt="M-Shop screenshot 2" loading="lazy" />
+              <img src="./assets/M-Shop/7.jpeg" alt="M-Shop screenshot 3" loading="lazy" />
+            </div>
 
             <div class="tag-row">
               <span>Flutter</span>
@@ -409,17 +590,59 @@
               </a>
             </div>
           </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <div>
+                <p class="project-kicker">Rick and Morty</p>
+                <h3 data-i18n="proj.rickmorty.title">GraphQL-powered character browser</h3>
+              </div>
+              <span class="project-badge muted">GitHub</span>
+            </div>
+
+            <p class="project-description" data-i18n="proj.rickmorty.desc">
+              A Flutter app for browsing Rick and Morty characters via
+              GraphQL, using GetX for state management and routing, Hive for
+              offline caching, and search, favorites, and sorting.
+            </p>
+
+            <div class="project-gallery" aria-label="Rick and Morty screenshots">
+              <img src="./assets/ricky/22.jpeg" alt="Rick and Morty app screenshot 1" loading="lazy" />
+              <img src="./assets/ricky/33.jpeg" alt="Rick and Morty app screenshot 2" loading="lazy" />
+              <img src="./assets/ricky/44.jpeg" alt="Rick and Morty app screenshot 3" loading="lazy" />
+              <img src="./assets/ricky/55.jpeg" alt="Rick and Morty app screenshot 4" loading="lazy" />
+              <img src="./assets/ricky/66.jpeg" alt="Rick and Morty app screenshot 5" loading="lazy" />
+            </div>
+
+            <div class="tag-row">
+              <span>Flutter</span>
+              <span>GraphQL</span>
+              <span>GetX</span>
+              <span>Hive</span>
+            </div>
+
+            <div class="platform-row">
+              <span>Android</span>
+              <span>iOS</span>
+            </div>
+
+            <div class="project-links">
+              <a class="btn btn-secondary" href="https://github.com/muhammadmajd/rick-and-morty" target="_blank" rel="noreferrer">
+                GitHub
+              </a>
+            </div>
+          </article>
         </div>
       </section>
 
       <section id="contact" class="section contact-section">
         <div class="contact-card">
           <div>
-            <p class="eyebrow">Contact</p>
-            <h2>Available for product work, mobile systems, and infrastructure.</h2>
+            <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+            <h2 data-i18n="contact.title">Available for product work, mobile systems, and infrastructure.</h2>
           </div>
           <div class="contact-links">
-            <a class="btn btn-primary" href="mailto:eng.muhammadaliah@gmail.com">Email</a>
+            <a class="btn btn-primary" href="mailto:eng.muhammadaliah@gmail.com"><span data-i18n="contact.email">Email</span></a>
             <a class="btn btn-secondary" href="https://www.linkedin.com/in/muhammad-aliah-b62bb6197" target="_blank" rel="noreferrer">LinkedIn</a>
             <a class="btn btn-secondary" href="https://github.com/muhammadmajd" target="_blank" rel="noreferrer">GitHub</a>
           </div>
@@ -429,7 +652,7 @@
 
     <footer class="site-footer">
       <span>© 2026 Muhammad Aliah</span>
-      <span>Built for GitHub Pages</span>
+      <span data-i18n="footer.built">Built for GitHub Pages</span>
     </footer>
 
     <script src="./script.js"></script>
