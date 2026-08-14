@@ -476,11 +476,7 @@ h1 {
   .about-grid,
   .projects-grid,
   .contact-card {
-    grid-template-columns: 1fr;
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .contact-card {
