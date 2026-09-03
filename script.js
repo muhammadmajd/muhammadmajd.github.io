@@ -38,7 +38,7 @@ const translations = {
     'about.eyebrow': 'About Me',
     'about.title': 'Development, teaching, and applied AI research.',
     'about.p1':
-      'My technical background covers Python, C++, JavaScript, Dart, backend development, and databases — with over 5 years building production mobile apps in Flutter, alongside Laravel, Linux server administration, and cloud infrastructure.',
+      'My technical background covers Python, C++, JavaScript, Dart, Java, backend development, and databases — with over 5 years building production mobile apps in Flutter, alongside Laravel, Linux server administration, and cloud infrastructure. I also use Java for native Android modules, such as the VPN tunnel service in Sham VPN, and for teaching.',
     'about.p2':
       "I hold a Master's degree from Bauman Moscow State Technical University (BMSTU) and am currently pursuing a PhD there, researching Artificial Intelligence and Machine Learning. I've also spent two years teaching web development and databases — I enjoy explaining complex topics simply and helping students build practical, independent problem-solving skills.",
     'pub.eyebrow': 'Publications',
@@ -56,7 +56,7 @@ const translations = {
     'common.openInColab': 'Open in Colab',
     'proj.shamvpn.title': 'Cross-platform VPN solution',
     'proj.shamvpn.desc':
-      'A multi-platform VPN stack built with Flutter, Laravel, Linux services, and Xray for production use across mobile and desktop clients, with a focus on resilient connectivity in restrictive network environments.',
+      "A multi-platform VPN stack built with Flutter, Laravel, Linux services, and Xray for production use across mobile and desktop clients, with a focus on resilient connectivity in restrictive network environments. The native Android tunnel module is built in Java on top of Android's VpnService API.",
     'proj.bert.title': 'Dictionary-Augmented Medical Text Classifier',
     'proj.bert.desc':
       'A BERT-family text classification pipeline for medical transcription abstracts. Domain terms from a medical dictionary are tagged with special tokens before fine-tuning, and this augmentation lifts accuracy for BERT, BioBERT, ClinicalBERT, BlueBERT, and SciBERT alike.',
@@ -119,7 +119,7 @@ const translations = {
     'about.eyebrow': 'نبذة عني',
     'about.title': 'التطوير، والتدريس، وأبحاث الذكاء الاصطناعي التطبيقية.',
     'about.p1':
-      'تشمل خلفيتي التقنية Python وC++ وJavaScript وDart وتطوير الخلفية البرمجية (Backend) وقواعد البيانات — مع أكثر من 5 سنوات في بناء تطبيقات موبايل إنتاجية باستخدام Flutter، إلى جانب Laravel، وإدارة خوادم Linux، والبنية التحتية السحابية.',
+      'تشمل خلفيتي التقنية Python وC++ وJavaScript وDart وJava وتطوير الخلفية البرمجية (Backend) وقواعد البيانات — مع أكثر من 5 سنوات في بناء تطبيقات موبايل إنتاجية باستخدام Flutter، إلى جانب Laravel، وإدارة خوادم Linux، والبنية التحتية السحابية. كما أستخدم Java لبناء وحدات أندرويد أصلية، مثل خدمة نفق VPN في Sham VPN، وفي التدريس أيضًا.',
     'about.p2':
       'حاصل على درجة الماجستير من جامعة موسكو الحكومية التقنية باسم باومان (BMSTU)، وأتابع حاليًا دراسة الدكتوراه فيها في مجال الذكاء الاصطناعي وتعلّم الآلة. كما أمضيتُ عامين في تدريس تطوير الويب وقواعد البيانات — وأستمتع بتبسيط المواضيع المعقدة ومساعدة الطلاب على اكتساب مهارات عملية ومستقلة في حل المشكلات.',
     'pub.eyebrow': 'المنشورات',
@@ -137,7 +137,7 @@ const translations = {
     'common.openInColab': 'فتح في Colab',
     'proj.shamvpn.title': 'حل VPN متعدد المنصات',
     'proj.shamvpn.desc':
-      'منظومة VPN متعددة المنصات مبنية باستخدام Flutter وLaravel وخدمات Linux وXray، جاهزة للاستخدام الإنتاجي عبر عملاء الموبايل وسطح المكتب، مع التركيز على استمرارية الاتصال في بيئات الشبكات المقيّدة.',
+      'منظومة VPN متعددة المنصات مبنية باستخدام Flutter وLaravel وخدمات Linux وXray، جاهزة للاستخدام الإنتاجي عبر عملاء الموبايل وسطح المكتب، مع التركيز على استمرارية الاتصال في بيئات الشبكات المقيّدة. وحدة نفق أندرويد الأصلية مبنية بلغة Java فوق واجهة VpnService الخاصة بأندرويد.',
     'proj.bert.title': 'مصنّف نصوص طبية مُعزَّز بقاموس مصطلحات',
     'proj.bert.desc':
       'خط معالجة لتصنيف النصوص الطبية باستخدام نماذج عائلة BERT، مخصص لملخصات التقارير الطبية المكتوبة. يتم وسم المصطلحات الطبية من قاموس متخصص برموز خاصة قبل عملية الضبط الدقيق (Fine-tuning)، وقد رفع هذا الإثراء دقة التصنيف في نماذج BERT وBioBERT وClinicalBERT وBlueBERT وSciBERT على حدٍّ سواء.',
@@ -200,7 +200,7 @@ const translations = {
     'about.eyebrow': 'Обо мне',
     'about.title': 'Разработка, преподавание и прикладные исследования в области ИИ.',
     'about.p1':
-      'Мой технический опыт охватывает Python, C++, JavaScript, Dart, серверную разработку и базы данных — включая более 5 лет создания промышленных мобильных приложений на Flutter, а также работу с Laravel, администрирование серверов Linux и облачную инфраструктуру.',
+      'Мой технический опыт охватывает Python, C++, JavaScript, Dart, Java, серверную разработку и базы данных — включая более 5 лет создания промышленных мобильных приложений на Flutter, а также работу с Laravel, администрирование серверов Linux и облачную инфраструктуру. Java я также использую для нативных модулей Android, например для VPN-туннеля в Sham VPN, и в преподавании.',
     'about.p2':
       'Имею степень магистра МГТУ им. Н.Э. Баумана и в настоящее время учусь там в аспирантуре, исследуя искусственный интеллект и машинное обучение. Также два года преподавал веб-разработку и базы данных — мне нравится просто объяснять сложные темы и помогать студентам развивать практические навыки самостоятельного решения задач.',
     'pub.eyebrow': 'Публикации',
@@ -218,7 +218,7 @@ const translations = {
     'common.openInColab': 'Открыть в Colab',
     'proj.shamvpn.title': 'Кроссплатформенное VPN-решение',
     'proj.shamvpn.desc':
-      'Мультиплатформенный VPN-стек на базе Flutter, Laravel, сервисов Linux и Xray для промышленного использования на мобильных и десктопных клиентах, с акцентом на устойчивое подключение в условиях сетевых ограничений.',
+      "Мультиплатформенный VPN-стек на базе Flutter, Laravel, сервисов Linux и Xray для промышленного использования на мобильных и десктопных клиентах, с акцентом на устойчивое подключение в условиях сетевых ограничений. Нативный модуль туннеля для Android написан на Java поверх Android VpnService.",
     'proj.bert.title': 'Классификатор медицинских текстов с расширением по словарю',
     'proj.bert.desc':
       'Пайплайн классификации текста на основе моделей семейства BERT для медицинских транскрипционных аннотаций. Термины из медицинского словаря размечаются специальными токенами перед дообучением, и такое расширение данных повышает точность моделей BERT, BioBERT, ClinicalBERT, BlueBERT и SciBERT.',
