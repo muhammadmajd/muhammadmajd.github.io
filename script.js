@@ -40,7 +40,7 @@ const translations = {
     'about.p1':
       'My technical background covers Python, C++, JavaScript, Dart, Java, backend development, and databases — with over 5 years building production mobile apps in Flutter, alongside Laravel, Linux server administration, and cloud infrastructure. I also use Java for native Android modules, such as the VPN tunnel service in Sham VPN, and for teaching.',
     'about.p2':
-      "I hold a Master's degree from Bauman Moscow State Technical University (BMSTU) and am currently pursuing a PhD there, researching Artificial Intelligence and Machine Learning. I've also spent two years teaching web development and databases — I enjoy explaining complex topics simply and helping students build practical, independent problem-solving skills.",
+      "I hold a Master's degree from Bauman Moscow State Technical University (BMSTU) and am currently pursuing a PhD there, researching Artificial Intelligence and Machine Learning. I've also spent two years teaching web development, Java, and databases — I enjoy explaining complex topics simply and helping students build practical, independent problem-solving skills.",
     'pub.eyebrow': 'Publications',
     'pub.title': 'Applied AI & NLP research.',
     'pub.kicker': 'REEPE 2025 · April 2025',
@@ -121,7 +121,7 @@ const translations = {
     'about.p1':
       'تشمل خلفيتي التقنية Python وC++ وJavaScript وDart وJava وتطوير الخلفية البرمجية (Backend) وقواعد البيانات — مع أكثر من 5 سنوات في بناء تطبيقات موبايل إنتاجية باستخدام Flutter، إلى جانب Laravel، وإدارة خوادم Linux، والبنية التحتية السحابية. كما أستخدم Java لبناء وحدات أندرويد أصلية، مثل خدمة نفق VPN في Sham VPN، وفي التدريس أيضًا.',
     'about.p2':
-      'حاصل على درجة الماجستير من جامعة موسكو الحكومية التقنية باسم باومان (BMSTU)، وأتابع حاليًا دراسة الدكتوراه فيها في مجال الذكاء الاصطناعي وتعلّم الآلة. كما أمضيتُ عامين في تدريس تطوير الويب وقواعد البيانات — وأستمتع بتبسيط المواضيع المعقدة ومساعدة الطلاب على اكتساب مهارات عملية ومستقلة في حل المشكلات.',
+      'حاصل على درجة الماجستير من جامعة موسكو الحكومية التقنية باسم باومان (BMSTU)، وأتابع حاليًا دراسة الدكتوراه فيها في مجال الذكاء الاصطناعي وتعلّم الآلة. كما أمضيتُ عامين في تدريس تطوير الويب وJava وقواعد البيانات — وأستمتع بتبسيط المواضيع المعقدة ومساعدة الطلاب على اكتساب مهارات عملية ومستقلة في حل المشكلات.',
     'pub.eyebrow': 'المنشورات',
     'pub.title': 'أبحاث تطبيقية في الذكاء الاصطناعي ومعالجة اللغة الطبيعية.',
     'pub.kicker': 'REEPE 2025 · أبريل 2025',
@@ -202,7 +202,7 @@ const translations = {
     'about.p1':
       'Мой технический опыт охватывает Python, C++, JavaScript, Dart, Java, серверную разработку и базы данных — включая более 5 лет создания промышленных мобильных приложений на Flutter, а также работу с Laravel, администрирование серверов Linux и облачную инфраструктуру. Java я также использую для нативных модулей Android, например для VPN-туннеля в Sham VPN, и в преподавании.',
     'about.p2':
-      'Имею степень магистра МГТУ им. Н.Э. Баумана и в настоящее время учусь там в аспирантуре, исследуя искусственный интеллект и машинное обучение. Также два года преподавал веб-разработку и базы данных — мне нравится просто объяснять сложные темы и помогать студентам развивать практические навыки самостоятельного решения задач.',
+      'Имею степень магистра МГТУ им. Н.Э. Баумана и в настоящее время учусь там в аспирантуре, исследуя искусственный интеллект и машинное обучение. Также два года преподавал веб-разработку, Java и базы данных — мне нравится просто объяснять сложные темы и помогать студентам развивать практические навыки самостоятельного решения задач.',
     'pub.eyebrow': 'Публикации',
     'pub.title': 'Прикладные исследования в области ИИ и NLP.',
     'pub.kicker': 'REEPE 2025 · Апрель 2025',
