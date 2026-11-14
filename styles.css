@@ -523,3 +523,16 @@ h1 {
     flex-direction: column;
   }
 }
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.18), rgba(18, 140, 126, 0.14));
+  border-color: rgba(37, 211, 102, 0.35);
+  color: #8ef0b3;
+  transition: background 160ms ease, border-color 160ms ease;
+}
+
+.btn-whatsapp:hover,
+.btn-whatsapp:focus-visible {
+  background: rgba(37, 211, 102, 0.25);
+  border-color: #25d366;
+}
